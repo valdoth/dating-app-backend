@@ -14,7 +14,6 @@ const connection_url = process.env.CONNECTION_URL
 // Middleware
 app.use(express.json())
 app.use(Cors())
-
 // DB config
 mongoose.connect(connection_url, {
 
