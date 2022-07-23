@@ -14,14 +14,7 @@ const connection_url = process.env.CONNECTION_URL
 
 // Middleware
 app.use(express.json())
-// app.use(cors());
-app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin','*');
-    res.setHeader('Access-Control-Allow-Methods','GET,POST,PUT,PATCH,DELETE');
-    res.setHeader('Access-Control-Allow-Methods','Content-Type','Authorization');
-    next();
-})
-
+app.use(cors());
 
 // DB config
 mongoose.connect(connection_url, {
